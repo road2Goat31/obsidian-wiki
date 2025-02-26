@@ -5,8 +5,8 @@ site_author: "Maik Käseberg"
 theme:
   name: material
   font: false
-  favicon: docs/icon/icon.png
-  logo: docs/icon/icon.png
+  favicon: /icon/icon.png
+  logo: /icon/icon.png
   icon:
     admonition:
       info: material/alarm 
@@ -45,7 +45,7 @@ theme:
     - palette
   
 extra_css:
-  - docs/css/extra.css
+  - /css/extra.css
 
 nav:
   - Home: index.md
