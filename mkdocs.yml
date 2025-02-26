@@ -5,7 +5,7 @@ site_author: "Maik Käseberg"
 theme:
   name: material
   font: false
-  favicon: icon/icon.png
+  favicon: icon/icon.ico
   logo: icon/icon.png
   icon:
     admonition:
@@ -42,10 +42,19 @@ theme:
     - navigation.indexes
     - navigation.tracking
     - navigation.path
+    - content.tooltips
     - palette
+
   
 extra_css:
   - css/extra.css
+  
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/road2Goat31/obsidian-wiki
+  generator: false  # Entfernt "Made with MkDocs"
+
 
 nav:
   - Home: index.md
@@ -123,12 +132,10 @@ nav:
           - Januar 2025: Knowledgebase/2_Aufgaben/1_Semester/25_01.md
           - Februar 2025: Knowledgebase/2_Aufgaben/1_Semester/25_02.md
       - 2. Semester: Knowledgebase/2_Aufgaben/2_Semester/
-  - Vorlagen: Knowledgebase/3_Vorlagen/
-  - Testbereich:
-      - Testdatei: Knowledgebase/4_Test/Test.md
+  #- Vorlagen: Knowledgebase/3_Vorlagen/
+  #- Testbereich:
+      #- Testdatei: Knowledgebase/4_Test/Test.md
   - Belegarbeit:
       - Notizen: Knowledgebase/5_Belegarbeit/Notizen_Belegarbeit.md
       - Vorlage Bachelorarbeit: Knowledgebase/5_Belegarbeit/Vorlage_Bachelorarbeit_Wirtschaftsinformatik_DD.docx
 
-theme:
-  name: material
