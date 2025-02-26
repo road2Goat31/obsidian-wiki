@@ -179,11 +179,11 @@
   },
   "active": "851ea8d8d5b20d18",
   "lastOpenFiles": [
-    "1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/command.md",
+    "1_Technologien/Ansible/Wissen/07_ Sonstiges/jinja-templating.md",
     "1_Technologien/Ansible/Wissen/05_Komponenten/ansible playbooks.md",
+    "1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/command.md",
     "1_Technologien/Ansible/Wissen/03_Best Practices/ansible-playbook.md",
     "1_Technologien/Ansible/Wissen/01_Grundlagen/2_Begriffe und Konzepte.md",
-    "1_Technologien/Ansible/Wissen/07_ Sonstiges/jinja-templating.md",
     "1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Navigator.md",
     "1_Technologien/Ansible/Wissen/05_Komponenten/ansible roles.md",
     "1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/copy.md",

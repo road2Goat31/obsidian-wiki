@@ -1,17 +1,22 @@
-# Welcome to MkDocs
+# Willkommen in der Knowledgebase 📚  
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Diese Knowledgebase dient als zentrale Anlaufstelle für gesammeltes Wissen, Best Practices und praktische Anleitungen zu verschiedenen Technologien. Hier findest du strukturierte Informationen zu Themen wie:  
 
-## Commands
+✅ **Ansible** – Automatisierung und Konfigurationsmanagement leicht gemacht  
+✅ **Cisco** – Netzwerktechnik, Router und Best Practices  
+✅ **Praktische Übungen** – Hands-on Labs zur Vertiefung des Wissens  
+✅ **Vorlagen & Best Practices** – Standardisierte Templates und Empfehlungen  
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Warum diese Knowledgebase?  
+🔹 **Zentrale Wissenssammlung** – Alle wichtigen Informationen an einem Ort  
+🔹 **Strukturierte Inhalte** – Klare Kategorien und einfache Navigation  
+🔹 **Lernen & Anwenden** – Praxisnahe Beispiele und Übungen  
 
-## Project layout
+## Erste Schritte 🚀  
+Nutze die Navigation oder die Suchfunktion, um schnell relevante Inhalte zu finden. Falls du neue Themen oder Verbesserungen hast, bist du herzlich eingeladen, zur Knowledgebase beizutragen!  
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+💡 **Pro-Tipp:** Regelmäßig vorbeischauen – die Knowledgebase wird stetig erweitert!  
+
+---
+
+📌 [Zur Dokumentation](./docs/) | 🛠 [GitHub Repository](https://github.com/road2Goat31/obsidian-wiki)  
