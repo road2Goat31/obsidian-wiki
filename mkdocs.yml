@@ -5,8 +5,8 @@ site_author: "Maik Käseberg"
 theme:
   name: material
   font: false
-  favicon: \icon\icon.png
-  logo: \icon\icon.png
+  favicon: icon/icon.png
+  logo: icon/icon.png
   icon:
     admonition:
       info: material/alarm 
@@ -25,7 +25,25 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - content.code.annotate
+    - content.action.edit
+    - content.action.view
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.path
+    - palette
+  
 extra_css:
   - css/extra.css
 
