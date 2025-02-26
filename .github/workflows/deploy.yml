@@ -1,0 +1,22 @@
+name: Deploy MkDocs
+
+on:
+  push:
+    branches:
+      - main  # Oder dein Hauptbranch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository klonen
+        uses: actions/checkout@v4
+
+      - name: Python & MkDocs installieren
+        run: |
+          pip install mkdocs-material
+
+      - name: Webseite bauen & deployen
+        run: |
+          mkdocs gh-deploy --force
