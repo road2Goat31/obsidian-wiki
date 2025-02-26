@@ -19,4 +19,4 @@ Nutze die Navigation oder die Suchfunktion, um schnell relevante Inhalte zu find
 
 ---
 
-📌 [Zur Dokumentation](./docs/) | 🛠 [GitHub Repository](https://github.com/road2Goat31/obsidian-wiki)  
+📌 [Zur Dokumentation](./docs/Knowledgebase/) | 🛠 [GitHub Repository](https://github.com/road2Goat31/obsidian-wiki)  
