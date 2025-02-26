@@ -13,15 +13,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: light-blue
+      primary: "#00305d"
+      accent: "#255f8b"
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: deep-orange
+      primary: "#00305d"
+      accent: "#255f8b"
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
@@ -31,6 +31,8 @@ theme:
     - navigation.instant
     - navigation.sections
     - toc.integrate
+    - content.tabs
+    - content.code.copy
     - content.code.annotate
     - content.action.edit
     - content.action.view
