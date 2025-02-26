@@ -1,0 +1,10 @@
+- wissenschaftliche Quellen nutzen (mit Verweisen/Referenzen)
+- Experteninterview als Option betrachten (qualitative Forschungsmethode)
+- gleiche Schriftart verwenden (einheitlich)
+- Bildquellen in die Bezeichnung? Querverweis reicht auch
+- Quellen nach BA-Leitfaden
+- Inhalt statt Inhaltsverzeichnis nach ISO 5008
+- Abkürzungen immer beim ersten Mal ausschreiben und dann in Klammern dahinter + ins Abkürzungsverzeichnis
+- Ergebnisse/Fazit: Was sollte laut Einleitung aufgezeigt werden? -> Bogen schlagen
+- bei technischen Unsicherheiten immer fragen
+- hinter jeden Textabschnitt die Quelle oder ebenda (ebd.)
