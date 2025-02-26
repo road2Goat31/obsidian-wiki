@@ -30,7 +30,6 @@ theme:
     - navigation.tabs
     - navigation.instant
     - navigation.sections
-    - navigation.expand
     - toc.integrate
     - content.code.annotate
     - content.action.edit
