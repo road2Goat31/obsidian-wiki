@@ -3,7 +3,7 @@ name: Deploy MkDocs
 on:
   push:
     branches:
-      - main  # Oder dein Hauptbranch
+      - main 
 
 jobs:
   deploy:
@@ -19,7 +19,7 @@ jobs:
           pip install mkdocs-material pyyaml mkdocs-gen-files mkdocs-literate-nav
 
       - name: Automatisch mkdocs.yml aktualisieren
-        run: python update_mkdocs.py
+        run: python gen_nav.py.py
 
       - name: Änderungen committen (falls nötig)
         run: |
