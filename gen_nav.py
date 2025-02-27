@@ -9,7 +9,7 @@ MKDOCS_YML = "mkdocs.yml"
 
 REMOVE_PREFIX_FROM = {"1_Technologien", "2_Aufgaben", "5_Belegarbeit"}
 
-# Standardkonfiguration
+# Standardkonfiguration für mkdocs.yml
 DEFAULT_CONFIG = {
     "site_name": "Knowledgebase",
     "site_author": "Maik Käseberg",
@@ -60,80 +60,56 @@ DEFAULT_CONFIG = {
     }
 }
 
-def clean_name(name, parent=None):
-    """Entfernt numerische Präfixe aus Datei- und Ordnernamen."""
+def clean_name(name):
+    """Entfernt numerische Präfixe (z. B. '1_') aus Dateinamen."""
     name = name.strip()
-    
-    # Falls der übergeordnete Ordner in REMOVE_PREFIX_FROM ist, entferne das Präfix
-    if parent and parent in REMOVE_PREFIX_FROM:
-        name = re.sub(r"^\d+_", "", name)
-    else:
-        match = re.match(r"^\d+_(.+)", name)
-        name = match.group(1) if match else name  
-
-    return name
+    match = re.match(r"^\d+_(.+)", name)
+    return match.group(1) if match else name  
 
 def scan_directory(base_dir):
-    """Scannt das Verzeichnis und erstellt eine geschachtelte Navigationsstruktur."""
+    """Scannt das Verzeichnis und erstellt eine geschachtelte Struktur."""
     structure = {}
 
     for root, dirs, files in os.walk(base_dir):
         dirs[:] = [d for d in dirs if d not in IGNORED_FOLDERS]
-
         md_files = sorted(f for f in files if f.endswith(".md"))
+
         if md_files or dirs:
             rel_path = os.path.relpath(root, BASE_DIR)
-            path_parts = rel_path.split(os.sep)
+            section = [clean_name(part) for part in rel_path.split(os.sep) if part]
 
-            # Falls das Verzeichnis ignoriert werden soll, weiter zur nächsten Iteration
-            if not path_parts or path_parts == ["."]:
+            if not section or section == ["."]:
                 continue  
 
-            cleaned_parts = [clean_name(part, path_parts[0]) for part in path_parts]
-
-            # Struktur schrittweise aufbauen
             current_level = structure
-            for part in cleaned_parts:
+            for part in section:
                 current_level = current_level.setdefault(part, {})
 
-            # Markdown-Dateien hinzufügen
             for md_file in md_files:
                 file_name = clean_name(os.path.splitext(md_file)[0])
                 current_level[file_name] = os.path.join(rel_path, md_file).replace("\\", "/")
 
-    structure.pop(".", None)  # Falls "." als Schlüssel existiert, löschen
     return structure
 
 def convert_to_yaml_list(data):
-    """Konvertiert eine geschachtelte Struktur in eine YAML-Formatierte Liste."""
+    """Konvertiert geschachteltes Dictionary in eine YAML-kompatible Liste."""
     if isinstance(data, dict):
         return [{key: convert_to_yaml_list(value)} for key, value in data.items()]
     return data
 
-def yaml_dump_custom(data, indent=0):
-    """Erstellt eine YAML-Darstellung mit genau 4 Leerzeichen pro Einrückung."""
-    yaml_str = ""
-    space = " " * indent
-    if isinstance(data, list):
-        for item in data:
-            for key, value in item.items():
-                yaml_str += f"{space}- {key}:\n{yaml_dump_custom(value, indent + 4)}"
-    elif isinstance(data, dict):
-        for key, value in data.items():
-            yaml_str += f"{space}{key}:\n{yaml_dump_custom(value, indent + 4)}"
-    else:
-        yaml_str += f"{space}- {data}\n"
-    return yaml_str
-
 def update_mkdocs_yml():
-    """Aktualisiert oder erstellt mkdocs.yml mit korrekter Navigationsstruktur."""
-    # Falls mkdocs.yml nicht existiert, eine neue Datei mit Standardwerten erstellen
+    """Aktualisiert mkdocs.yml mit korrekter Navigation."""
+    # Falls Datei nicht existiert, mit Standardwerten starten
     if not os.path.exists(MKDOCS_YML):
         print(f"⚠️ mkdocs.yml nicht gefunden. Erstellt eine neue Datei mit Standardwerten.")
         config = DEFAULT_CONFIG.copy()
     else:
-        with open(MKDOCS_YML, "r", encoding="utf-8") as f:
-            config = yaml.safe_load(f) or {}
+        try:
+            with open(MKDOCS_YML, "r", encoding="utf-8") as f:
+                config = yaml.safe_load(f) or {}
+        except yaml.YAMLError:
+            print(f"⚠️ mkdocs.yml ist fehlerhaft. Erstellt eine neue Datei mit Standardwerten.")
+            config = DEFAULT_CONFIG.copy()
 
     # Fehlende Standardwerte setzen
     for key, value in DEFAULT_CONFIG.items():
@@ -146,10 +122,10 @@ def update_mkdocs_yml():
 
     if not new_nav:
         print("⚠️ Keine Markdown-Dateien gefunden! Navigation bleibt leer.")
-        return
+    else:
+        config["nav"] = new_nav  
 
-    config["nav"] = new_nav  
-
+    # YAML-Datei schreiben
     with open(MKDOCS_YML, "w", encoding="utf-8") as f:
         yaml.dump(config, f, allow_unicode=True, default_flow_style=False, indent=4)
 
