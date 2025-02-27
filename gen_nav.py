@@ -1,10 +1,18 @@
 import os
 import yaml
+import re
 
-# Konfiguration: Ignorierte Ordner
+# Konfiguration: Ignorierte Ordner und Ordner, bei denen Präfixe entfernt werden
 IGNORED_FOLDERS = {".obsidian", "3_Vorlagen", "4_Test"}
-BASE_DIR = "docs/Knowledgebase"  # Hier sollte dein Markdown-Root sein
+BASE_DIR = "docs/Knowledgebase"
 MKDOCS_YML = "mkdocs.yml"
+
+REMOVE_PREFIX_FROM = {"1_Technologien", "2_Aufgaben", "3_Belegarbeit"}
+
+def clean_name(name):
+    """Entfernt numerische Präfixe (z. B. '1_') von bestimmten Ordnern."""
+    match = re.match(r"^\d+_(.+)", name)
+    return match.group(1) if match and name in REMOVE_PREFIX_FROM else name
 
 def scan_directory(base_dir):
     """Scannt das Verzeichnis und erstellt eine geschachtelte Struktur für mkdocs.yml."""
@@ -13,13 +21,12 @@ def scan_directory(base_dir):
     print(f"📂 Durchsuche das Verzeichnis: {base_dir}")
 
     for root, dirs, files in os.walk(base_dir):
-        # Entferne ignorierte Ordner aus der Suche
         dirs[:] = [d for d in dirs if d not in IGNORED_FOLDERS]
 
-        md_files = [f for f in files if f.endswith(".md")]
-        if md_files:
+        md_files = sorted(f for f in files if f.endswith(".md"))
+        if md_files or dirs:
             rel_path = os.path.relpath(root, BASE_DIR)
-            section = rel_path.split(os.sep)
+            section = [clean_name(part) for part in rel_path.split(os.sep) if part]
 
             current_level = structure
             for part in section:
@@ -35,13 +42,15 @@ def scan_directory(base_dir):
 def build_nav_structure(structure):
     """Konvertiert die gescannte Ordnerstruktur in das NAV-Format von mkdocs."""
     def build_recursive(node):
-        result = []
+        nav = []
         for key, value in sorted(node.items()):
             if isinstance(value, dict):
-                result.append({key: build_recursive(value)})
+                sub_nav = build_recursive(value)
+                if sub_nav:
+                    nav.append({key: sub_nav})
             else:
-                result.append({key: value})
-        return result
+                nav.append({key: value})
+        return nav
 
     nav_structure = build_recursive(structure)
     print(f"📝 Generierte Navigation:\n{yaml.dump(nav_structure, allow_unicode=True, default_flow_style=False, sort_keys=False)}")
