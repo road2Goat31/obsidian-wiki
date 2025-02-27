@@ -47,18 +47,15 @@ def build_nav_structure(structure):
         for key, value in sorted(node.items()):
             if isinstance(value, dict):
                 sub_nav = build_recursive(value)
-                # Falls ein Ordner eine index.md enthält, setze diese als Hauptseite
                 index_file = value.get("index")
                 if index_file:
                     sub_nav.insert(0, {"Startseite": index_file})
-                if sub_nav:
-                    nav.append({key: sub_nav})
+                nav.append({key: sub_nav})
             else:
                 nav.append({key: value})
         return nav
 
     nav_structure = build_recursive(structure)
-    print(f"📝 Generierte Navigation:\n{yaml.dump(nav_structure, allow_unicode=True, default_flow_style=False, sort_keys=False)}")
     return nav_structure
 
 def update_mkdocs_yml():
@@ -78,7 +75,7 @@ def update_mkdocs_yml():
     config["nav"] = new_nav
 
     with open(MKDOCS_YML, "w", encoding="utf-8") as f:
-        yaml.dump(config, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+        yaml.dump(config, f, allow_unicode=True, default_flow_style=False, sort_keys=False, indent=4)
 
     print("✅ mkdocs.yml erfolgreich aktualisiert!")
 
