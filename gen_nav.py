@@ -62,38 +62,48 @@ DEFAULT_CONFIG = {
     "plugins": ["search"]
 }
 
-def clean_name(name):
-    """Entfernt numerische Präfixe (z. B. '1_') und korrigiert Leerzeichen."""
+def clean_name(name, remove_prefix=True):
+    """Entfernt numerische Präfixe (z. B. '1_') nur, wenn remove_prefix=True."""
     name = name.strip()
-    match = re.match(r"^\d+_(.+)", name)
-    return match.group(1) if match else name  
+    if remove_prefix:
+        match = re.match(r"^\d+_(.+)", name)
+        return match.group(1) if match else name  
+    return name
 
 def scan_directory(base_dir):
     """
     Scannt das Verzeichnis und erstellt eine geschachtelte Struktur.
-    Dabei wird jeder Dateipfad so aufgebaut, dass er mit 'Knowledgebase/' beginnt.
+    Entfernt Präfixe nur in der obersten Ebene.
     """
     structure = {}
 
     for root, dirs, files in os.walk(base_dir):
         dirs[:] = [d for d in dirs if d not in IGNORED_FOLDERS]
         md_files = sorted(f for f in files if f.endswith(".md"))
+        
         if md_files or dirs:
             rel_path = os.path.relpath(root, BASE_DIR)
-            section = [clean_name(part) for part in rel_path.split(os.sep) if part]
+            path_parts = rel_path.split(os.sep)
+
+            # Entferne Präfixe nur auf der obersten Ebene
+            section = [
+                clean_name(part, remove_prefix=(i == 0)) 
+                for i, part in enumerate(path_parts) if part
+            ]
+
             if section and section[0] in REMOVE_PREFIX_FROM:
                 section[0] = clean_name(section[0])
+
             if not section or section == ["."]:
                 continue
+
             current_level = structure
             for part in section:
                 current_level = current_level.setdefault(part, {})
+
             for md_file in md_files:
-                file_name = clean_name(os.path.splitext(md_file)[0])
-                if rel_path == ".":
-                    final_path = "Knowledgebase/" + md_file
-                else:
-                    final_path = "Knowledgebase/" + os.path.join(rel_path, md_file).replace("\\", "/")
+                file_name = clean_name(os.path.splitext(md_file)[0], remove_prefix=False)
+                final_path = "Knowledgebase/" + os.path.join(rel_path, md_file).replace("\\", "/")
                 current_level[file_name] = final_path
 
     structure.pop(".", None)
@@ -143,6 +153,7 @@ def update_mkdocs_yml():
     ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "extra_javascript", "plugins", "nav"]
     ordered_config = {key: config[key] for key in ordered_keys if key in config}
 
+    # Pfade korrigieren
     config["theme"]["custom_dir"] = config["theme"]["custom_dir"].replace("\\", "/")
 
     with open(MKDOCS_YML, "w", encoding="utf-8") as f:
