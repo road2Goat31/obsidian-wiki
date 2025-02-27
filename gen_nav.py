@@ -143,6 +143,8 @@ def update_mkdocs_yml():
     ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "extra_javascript", "plugins", "nav"]
     ordered_config = {key: config[key] for key in ordered_keys if key in config}
 
+    config["theme"]["custom_dir"] = config["theme"]["custom_dir"].replace("\\", "/")
+
     with open(MKDOCS_YML, "w", encoding="utf-8") as f:
         yaml.dump(ordered_config, f, allow_unicode=True, default_flow_style=False, indent=4, sort_keys=False)
 
