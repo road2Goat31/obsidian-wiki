@@ -116,7 +116,6 @@ def update_mkdocs_yml():
     Aktualisiert mkdocs.yml und stellt sicher, dass die Default-Konfiguration vor dem
     nav-Bereich steht – in der gewünschten Reihenfolge.
     """
-    # Neue oder vorhandene Konfiguration laden
     if not os.path.exists(MKDOCS_YML):
         print("⚠️ mkdocs.yml nicht gefunden. Erstelle neue Datei mit Standardwerten.")
         config = DEFAULT_CONFIG.copy()
@@ -124,7 +123,6 @@ def update_mkdocs_yml():
         with open(MKDOCS_YML, "r", encoding="utf-8") as f:
             config = yaml.safe_load(f) or {}
     
-    # Fehlende Standardwerte ergänzen
     for key, value in DEFAULT_CONFIG.items():
         if key not in config:
             config[key] = value
@@ -144,7 +142,6 @@ def update_mkdocs_yml():
     ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "plugins", "nav"]
     ordered_config = {key: config[key] for key in ordered_keys if key in config}
 
-    # YAML-Datei mit fester Reihenfolge schreiben (sort_keys=False verhindert automatische Sortierung)
     with open(MKDOCS_YML, "w", encoding="utf-8") as f:
         yaml.dump(ordered_config, f, allow_unicode=True, default_flow_style=False, indent=4, sort_keys=False)
 
@@ -153,8 +150,16 @@ def update_mkdocs_yml():
 if __name__ == "__main__":
     update_mkdocs_yml()
 
+    # Patch mkdocs-with-pdf: Überschreibe Options.cover_title, damit kein Zugriff auf _cover_title erfolgt.
+    try:
+        import mkdocs_with_pdf.options as pdf_opts
+        pdf_opts.Options.cover_title = property(lambda self: '')
+        print("Patching mkdocs-with-pdf Options.cover_title succeeded.")
+    except Exception as e:
+        print("Patching mkdocs-with-pdf Options.cover_title failed:", e)
+
     print("📦 Installiere benötigte Python-Pakete...")
-    subprocess.run(["pip", "install", "mkdocs", "mkdocs-material", "mkdocs-with-pdf"], check=True)
+    subprocess.run(["pip", "install", "mkdocs", "mkdocs-material", "mkdocs-with-pdf==0.9.2"], check=True)
 
     print("🔧 Baue die MkDocs-Dokumentation...")
     subprocess.run(["mkdocs", "build"], check=True)
