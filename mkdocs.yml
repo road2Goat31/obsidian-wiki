@@ -51,14 +51,13 @@ extra:
         link: https://github.com/road2Goat31/obsidian-wiki
     generator: false
 nav:
--   .: []
 -   Aufgaben:
     -   Semester:
-        -   '24_10': 2_Aufgaben/1_Semester/24_10.md
-        -   '24_11': 2_Aufgaben/1_Semester/24_11.md
-        -   '24_12': 2_Aufgaben/1_Semester/24_12.md
-        -   '25_01': 2_Aufgaben/1_Semester/25_01.md
-        -   '25_02': 2_Aufgaben/1_Semester/25_02.md
+        -   '01': 2_Aufgaben/1_Semester/25_01.md
+        -   '02': 2_Aufgaben/1_Semester/25_02.md
+        -   '10': 2_Aufgaben/1_Semester/24_10.md
+        -   '11': 2_Aufgaben/1_Semester/24_11.md
+        -   '12': 2_Aufgaben/1_Semester/24_12.md
 -   Belegarbeit:
     -   Notizen_Belegarbeit: 5_Belegarbeit/Notizen_Belegarbeit.md
 -   Technologien:
@@ -85,14 +84,14 @@ nav:
                     -   Semaphore mit apt: 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore
                             mit apt.md
             -   Grundlagen:
-                -   1_Erläuterung zu Ansible: 1_Technologien/Ansible/Wissen/01_Grundlagen/1_Erläuterung
-                        zu Ansible.md
-                -   2_Begriffe und Konzepte: 1_Technologien/Ansible/Wissen/01_Grundlagen/2_Begriffe
+                -   Begriffe und Konzepte: 1_Technologien/Ansible/Wissen/01_Grundlagen/2_Begriffe
                         und Konzepte.md
-                -   3_Funktionsweise Ansible: 1_Technologien/Ansible/Wissen/01_Grundlagen/3_Funktionsweise
-                        Ansible.md
-                -   4_Beispiele und Tutorials: 1_Technologien/Ansible/Wissen/01_Grundlagen/4_Beispiele
+                -   Beispiele und Tutorials: 1_Technologien/Ansible/Wissen/01_Grundlagen/4_Beispiele
                         und Tutorials.md
+                -   Erläuterung zu Ansible: 1_Technologien/Ansible/Wissen/01_Grundlagen/1_Erläuterung
+                        zu Ansible.md
+                -   Funktionsweise Ansible: 1_Technologien/Ansible/Wissen/01_Grundlagen/3_Funktionsweise
+                        Ansible.md
             -   Komponenten:
                 -   Collections:
                     -   Installation und Verwendung: 1_Technologien/Ansible/Wissen/05_Komponenten/Collections/Installation
@@ -130,22 +129,21 @@ nav:
     -   Cisco:
         -   Grundlegend: 1_Technologien/Cisco/Grundlegend.md
         -   Router:
-            -   1_Basiskonfigurationen: 1_Technologien/Cisco/Router/1_Basiskonfigurationen.md
-            -   2_Zugriff absichern: 1_Technologien/Cisco/Router/2_Zugriff absichern.md
-            -   3_SSH: 1_Technologien/Cisco/Router/3_SSH.md
-            -   4_Interface konfigurieren: 1_Technologien/Cisco/Router/4_Interface
-                    konfigurieren.md
-            -   5_DHCP: 1_Technologien/Cisco/Router/5_DHCP.md
+            -   Basiskonfigurationen: 1_Technologien/Cisco/Router/1_Basiskonfigurationen.md
+            -   DHCP: 1_Technologien/Cisco/Router/5_DHCP.md
             -   Grundlegend: 1_Technologien/Cisco/Router/Grundlegend.md
+            -   Interface konfigurieren: 1_Technologien/Cisco/Router/4_Interface konfigurieren.md
+            -   SSH: 1_Technologien/Cisco/Router/3_SSH.md
             -   Troubleshooting: 1_Technologien/Cisco/Router/Troubleshooting.md
+            -   Zugriff absichern: 1_Technologien/Cisco/Router/2_Zugriff absichern.md
         -   Switch:
-            -   1_Inital Settings: 1_Technologien/Cisco/Switch/1_Inital Settings.md
-            -   2_Gesicherter Zugriff (SSH): 1_Technologien/Cisco/Switch/2_Gesicherter
+            -   (R)STP: 1_Technologien/Cisco/Switch/5_(R)STP.md
+            -   Gesicherter Zugriff (SSH): 1_Technologien/Cisco/Switch/2_Gesicherter
                     Zugriff (SSH).md
-            -   3_VLAN: 1_Technologien/Cisco/Switch/3_VLAN.md
-            -   4_PortChannel (LAG): 1_Technologien/Cisco/Switch/4_PortChannel (LAG).md
-            -   5_(R)STP: 1_Technologien/Cisco/Switch/5_(R)STP.md
-            -   6_Security: 1_Technologien/Cisco/Switch/6_Security.md
+            -   Inital Settings: 1_Technologien/Cisco/Switch/1_Inital Settings.md
+            -   PortChannel (LAG): 1_Technologien/Cisco/Switch/4_PortChannel (LAG).md
+            -   Security: 1_Technologien/Cisco/Switch/6_Security.md
             -   Test: 1_Technologien/Cisco/Switch/Test.md
+            -   VLAN: 1_Technologien/Cisco/Switch/3_VLAN.md
     -   Grundlegend:
         -   IPv6: 1_Technologien/Grundlegend/IPv6.md
