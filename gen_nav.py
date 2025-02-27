@@ -2,17 +2,18 @@ import os
 import yaml
 import re
 
-# Konfiguration: Ignorierte Ordner und Ordner, bei denen Präfixe entfernt werden
+# Konfiguration: Ignorierte Ordner & Ordner, bei denen Präfixe entfernt werden
 IGNORED_FOLDERS = {".obsidian", "3_Vorlagen", "4_Test"}
 BASE_DIR = "docs/Knowledgebase"
 MKDOCS_YML = "mkdocs.yml"
 
-REMOVE_PREFIX_FROM = {"1_Technologien", "2_Aufgaben", "3_Belegarbeit"}
+# Hauptkategorien, bei denen Nummern entfernt werden
+REMOVE_PREFIX_FROM = {"1_Technologien", "2_Aufgaben", "5_Belegarbeit"}
 
 def clean_name(name):
     """Entfernt numerische Präfixe (z. B. '1_') von bestimmten Ordnern."""
     match = re.match(r"^\d+_(.+)", name)
-    return match.group(1) if match and name in REMOVE_PREFIX_FROM else name
+    return match.group(1) if match else name  # Entfernt nur Zahlen-Präfixe
 
 def scan_directory(base_dir):
     """Scannt das Verzeichnis und erstellt eine geschachtelte Struktur für mkdocs.yml."""
@@ -46,6 +47,10 @@ def build_nav_structure(structure):
         for key, value in sorted(node.items()):
             if isinstance(value, dict):
                 sub_nav = build_recursive(value)
+                # Falls ein Ordner eine index.md enthält, setze diese als Hauptseite
+                index_file = value.get("index")
+                if index_file:
+                    sub_nav.insert(0, {"Startseite": index_file})
                 if sub_nav:
                     nav.append({key: sub_nav})
             else:
