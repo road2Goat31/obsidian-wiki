@@ -1,0 +1,5 @@
+{% if page.title %}
+<a href="{{ base_url }}/pdfs/{{ page.title | slugify }}.pdf" class="pdf-download" target="_blank">
+    PDF herunterladen
+</a>
+{% endif %}
