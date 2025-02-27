@@ -18,7 +18,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install mkdocs-material pyyaml mkdocs-gen-files mkdocs-literate-nav mkdocs-with-pdf
           pip install --upgrade mkdocs-with-pdf
-          pip install mkdocs-with-pdf==0.9.3
+          pip install mkdocs-with-pdf==0.9.2
 
 
       - name: Automatisch mkdocs.yml aktualisieren
