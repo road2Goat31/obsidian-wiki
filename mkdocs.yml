@@ -1,5 +1,38 @@
 nav:
     - Technologien:
+        - Cisco:
+            - Grundlegend:
+                - 1_Technologien/Cisco/Grundlegend.md
+            - Switch:
+                - Inital Settings:
+                    - 1_Technologien/Cisco/Switch/1_Inital Settings.md
+                - Gesicherter Zugriff (SSH):
+                    - 1_Technologien/Cisco/Switch/2_Gesicherter Zugriff (SSH).md
+                - VLAN:
+                    - 1_Technologien/Cisco/Switch/3_VLAN.md
+                - PortChannel (LAG):
+                    - 1_Technologien/Cisco/Switch/4_PortChannel (LAG).md
+                - (R)STP:
+                    - 1_Technologien/Cisco/Switch/5_(R)STP.md
+                - Security:
+                    - 1_Technologien/Cisco/Switch/6_Security.md
+                - Test:
+                    - 1_Technologien/Cisco/Switch/Test.md
+            - Router:
+                - Basiskonfigurationen:
+                    - 1_Technologien/Cisco/Router/1_Basiskonfigurationen.md
+                - Zugriff absichern:
+                    - 1_Technologien/Cisco/Router/2_Zugriff absichern.md
+                - SSH:
+                    - 1_Technologien/Cisco/Router/3_SSH.md
+                - Interface konfigurieren:
+                    - 1_Technologien/Cisco/Router/4_Interface konfigurieren.md
+                - DHCP:
+                    - 1_Technologien/Cisco/Router/5_DHCP.md
+                - Grundlegend:
+                    - 1_Technologien/Cisco/Router/Grundlegend.md
+                - Troubleshooting:
+                    - 1_Technologien/Cisco/Router/Troubleshooting.md
         - Ansible:
             - praktische_Uebungen:
                 - Aufgabe_Switch:
@@ -16,18 +49,6 @@ nav:
                         - 1_Technologien/Ansible/Wissen/01_Grundlagen/3_Funktionsweise Ansible.md
                     - Beispiele und Tutorials:
                         - 1_Technologien/Ansible/Wissen/01_Grundlagen/4_Beispiele und Tutorials.md
-                - Starten mit Ansible:
-                    - Installation von Ansible:
-                        - 1_Technologien/Ansible/Wissen/02_Starten mit Ansible/Installation von Ansible.md
-                - Best Practices:
-                    - ansible-dir:
-                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-dir.md
-                    - ansible-doku:
-                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-doku.md
-                    - ansible-inventory:
-                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-inventory.md
-                    - ansible-playbook:
-                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-playbook.md
                 - cli-tools:
                     - Ansible-Builder:
                         - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Builder.md
@@ -71,6 +92,9 @@ nav:
                                 - 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/quote.md
                             - shell:
                                 - 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/shell.md
+                - Starten mit Ansible:
+                    - Installation von Ansible:
+                        - 1_Technologien/Ansible/Wissen/02_Starten mit Ansible/Installation von Ansible.md
                 - GUI:
                     - Ansible Forms:
                         - 1_Technologien/Ansible/Wissen/06_GUI/Ansible Forms.md
@@ -79,6 +103,15 @@ nav:
                             - 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore mit Docker unter Ubuntu.md
                         - Semaphore mit apt:
                             - 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore mit apt.md
+                - Best Practices:
+                    - ansible-dir:
+                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-dir.md
+                    - ansible-doku:
+                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-doku.md
+                    - ansible-inventory:
+                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-inventory.md
+                    - ansible-playbook:
+                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-playbook.md
                 -  Sonstiges:
                     - Dev-Tools:
                         - 1_Technologien/Ansible/Wissen/07_ Sonstiges/Dev-Tools.md
@@ -90,39 +123,6 @@ nav:
                         - 1_Technologien/Ansible/Wissen/07_ Sonstiges/jinja-templating.md
                     - potentielle-probleme:
                         - 1_Technologien/Ansible/Wissen/07_ Sonstiges/potentielle-probleme.md
-        - Cisco:
-            - Grundlegend:
-                - 1_Technologien/Cisco/Grundlegend.md
-            - Router:
-                - Basiskonfigurationen:
-                    - 1_Technologien/Cisco/Router/1_Basiskonfigurationen.md
-                - Zugriff absichern:
-                    - 1_Technologien/Cisco/Router/2_Zugriff absichern.md
-                - SSH:
-                    - 1_Technologien/Cisco/Router/3_SSH.md
-                - Interface konfigurieren:
-                    - 1_Technologien/Cisco/Router/4_Interface konfigurieren.md
-                - DHCP:
-                    - 1_Technologien/Cisco/Router/5_DHCP.md
-                - Grundlegend:
-                    - 1_Technologien/Cisco/Router/Grundlegend.md
-                - Troubleshooting:
-                    - 1_Technologien/Cisco/Router/Troubleshooting.md
-            - Switch:
-                - Inital Settings:
-                    - 1_Technologien/Cisco/Switch/1_Inital Settings.md
-                - Gesicherter Zugriff (SSH):
-                    - 1_Technologien/Cisco/Switch/2_Gesicherter Zugriff (SSH).md
-                - VLAN:
-                    - 1_Technologien/Cisco/Switch/3_VLAN.md
-                - PortChannel (LAG):
-                    - 1_Technologien/Cisco/Switch/4_PortChannel (LAG).md
-                - (R)STP:
-                    - 1_Technologien/Cisco/Switch/5_(R)STP.md
-                - Security:
-                    - 1_Technologien/Cisco/Switch/6_Security.md
-                - Test:
-                    - 1_Technologien/Cisco/Switch/Test.md
         - Grundlegend:
             - IPv6:
                 - 1_Technologien/Grundlegend/IPv6.md
