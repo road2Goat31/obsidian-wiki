@@ -84,6 +84,8 @@ nav:
                     (LAG).md
             -   5_(R)STP: Knowledgebase/1_Technologien/Cisco/Switch/5_(R)STP.md
             -   6_Security: Knowledgebase/1_Technologien/Cisco/Switch/6_Security.md
+            -   Config speichern: Knowledgebase/1_Technologien/Cisco/Switch/Config
+                    speichern.md
         -   Router:
             -   1_Basiskonfigurationen: Knowledgebase/1_Technologien/Cisco/Router/1_Basiskonfigurationen.md
             -   2_Zugriff absichern: Knowledgebase/1_Technologien/Cisco/Router/2_Zugriff
@@ -167,6 +169,7 @@ nav:
                 -   potentielle-probleme: Knowledgebase/1_Technologien/Ansible/Wissen/07_
                         Sonstiges/potentielle-probleme.md
     -   Grundlegend:
+        -   IPv4: Knowledgebase/1_Technologien/Grundlegend/IPv4.md
         -   IPv6: Knowledgebase/1_Technologien/Grundlegend/IPv6.md
 -   Aufgaben:
     -   1_Semester:
