@@ -1,143 +1,149 @@
+extra:
+    generator: false
+    social:
+    -   icon: fontawesome/brands/github
+        link: https://github.com/road2Goat31/obsidian-wiki
+extra_css:
+- css/extra.css
 nav:
-    - Technologien:
-        - Ansible:
-            - praktische_Uebungen:
-                - Aufgabe_Switch:
-                    - 1_Technologien/Ansible/praktische_Uebungen/Aufgabe_Switch.md
-                - Beispiel_Testumgebung:
-                    - 1_Technologien/Ansible/praktische_Uebungen/Beispiel_Testumgebung.md
-            - Wissen:
-                - Grundlagen:
-                    - Erläuterung zu Ansible:
-                        - 1_Technologien/Ansible/Wissen/01_Grundlagen/1_Erläuterung zu Ansible.md
-                    - Begriffe und Konzepte:
-                        - 1_Technologien/Ansible/Wissen/01_Grundlagen/2_Begriffe und Konzepte.md
-                    - Funktionsweise Ansible:
-                        - 1_Technologien/Ansible/Wissen/01_Grundlagen/3_Funktionsweise Ansible.md
-                    - Beispiele und Tutorials:
-                        - 1_Technologien/Ansible/Wissen/01_Grundlagen/4_Beispiele und Tutorials.md
-                - Starten mit Ansible:
-                    - Installation von Ansible:
-                        - 1_Technologien/Ansible/Wissen/02_Starten mit Ansible/Installation von Ansible.md
-                - Best Practices:
-                    - ansible-dir:
-                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-dir.md
-                    - ansible-doku:
-                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-doku.md
-                    - ansible-inventory:
-                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-inventory.md
-                    - ansible-playbook:
-                        - 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-playbook.md
-                - cli-tools:
-                    - Ansible-Builder:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Builder.md
-                    - Ansible-Config:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Config.md
-                    - Ansible-Doc:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Doc.md
-                    - Ansible-Galaxy:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Galaxy.md
-                    - Ansible-Inventory:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Inventory.md
-                    - Ansible-Lint:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Lint.md
-                    - Ansible-Navigator:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Navigator.md
-                    - Ansible-Playbook:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Playbook.md
-                    - Ansible-Vault:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Vault.md
-                    - Wichtige Befehle:
-                        - 1_Technologien/Ansible/Wissen/04_cli-tools/Wichtige Befehle.md
-                - Komponenten:
-                    - ansible playbooks:
-                        - 1_Technologien/Ansible/Wissen/05_Komponenten/ansible playbooks.md
-                    - ansible roles:
-                        - 1_Technologien/Ansible/Wissen/05_Komponenten/ansible roles.md
-                    - Collections:
-                        - Installation und Verwendung:
-                            - 1_Technologien/Ansible/Wissen/05_Komponenten/Collections/Installation und Verwendung.md
-                    - Module:
-                        - ansible-win-desired-state-configuration:
-                            - 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible-win-desired-state-configuration.md
-                        - ansible.builtin:
-                            - command:
-                                - 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/command.md
-                            - copy:
-                                - 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/copy.md
-                            - debug:
-                                - 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/debug.md
-                            - quote:
-                                - 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/quote.md
-                            - shell:
-                                - 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/shell.md
-                - GUI:
-                    - Ansible Forms:
-                        - 1_Technologien/Ansible/Wissen/06_GUI/Ansible Forms.md
-                    - Semaphore:
-                        - Semaphore mit Docker unter Ubuntu:
-                            - 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore mit Docker unter Ubuntu.md
-                        - Semaphore mit apt:
-                            - 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore mit apt.md
-                -  Sonstiges:
-                    - Dev-Tools:
-                        - 1_Technologien/Ansible/Wissen/07_ Sonstiges/Dev-Tools.md
-                    - Priviledged User Linux:
-                        - 1_Technologien/Ansible/Wissen/07_ Sonstiges/Priviledged User Linux.md
-                    - ansible-become-priviledge-escalation:
-                        - 1_Technologien/Ansible/Wissen/07_ Sonstiges/ansible-become-priviledge-escalation.md
-                    - jinja-templating:
-                        - 1_Technologien/Ansible/Wissen/07_ Sonstiges/jinja-templating.md
-                    - potentielle-probleme:
-                        - 1_Technologien/Ansible/Wissen/07_ Sonstiges/potentielle-probleme.md
-        - Cisco:
-            - Grundlegend:
-                - 1_Technologien/Cisco/Grundlegend.md
-            - Router:
-                - Basiskonfigurationen:
-                    - 1_Technologien/Cisco/Router/1_Basiskonfigurationen.md
-                - Zugriff absichern:
-                    - 1_Technologien/Cisco/Router/2_Zugriff absichern.md
-                - SSH:
-                    - 1_Technologien/Cisco/Router/3_SSH.md
-                - Interface konfigurieren:
-                    - 1_Technologien/Cisco/Router/4_Interface konfigurieren.md
-                - DHCP:
-                    - 1_Technologien/Cisco/Router/5_DHCP.md
-                - Grundlegend:
-                    - 1_Technologien/Cisco/Router/Grundlegend.md
-                - Troubleshooting:
-                    - 1_Technologien/Cisco/Router/Troubleshooting.md
-            - Switch:
-                - Inital Settings:
-                    - 1_Technologien/Cisco/Switch/1_Inital Settings.md
-                - Gesicherter Zugriff (SSH):
-                    - 1_Technologien/Cisco/Switch/2_Gesicherter Zugriff (SSH).md
-                - VLAN:
-                    - 1_Technologien/Cisco/Switch/3_VLAN.md
-                - PortChannel (LAG):
-                    - 1_Technologien/Cisco/Switch/4_PortChannel (LAG).md
-                - (R)STP:
-                    - 1_Technologien/Cisco/Switch/5_(R)STP.md
-                - Security:
-                    - 1_Technologien/Cisco/Switch/6_Security.md
-                - Test:
-                    - 1_Technologien/Cisco/Switch/Test.md
-        - Grundlegend:
-            - IPv6:
-                - 1_Technologien/Grundlegend/IPv6.md
-    - Aufgaben:
-        - Semester:
-            - 10:
-                - 2_Aufgaben/1_Semester/24_10.md
-            - 11:
-                - 2_Aufgaben/1_Semester/24_11.md
-            - 12:
-                - 2_Aufgaben/1_Semester/24_12.md
-            - 01:
-                - 2_Aufgaben/1_Semester/25_01.md
-            - 02:
-                - 2_Aufgaben/1_Semester/25_02.md
-    - Belegarbeit:
-        - Notizen_Belegarbeit:
-            - 5_Belegarbeit/Notizen_Belegarbeit.md
+-   Technologien:
+    -   Ansible:
+        -   praktische_Uebungen:
+            -   Aufgabe_Switch: 1_Technologien/Ansible/praktische_Uebungen/Aufgabe_Switch.md
+            -   Beispiel_Testumgebung: 1_Technologien/Ansible/praktische_Uebungen/Beispiel_Testumgebung.md
+        -   Wissen:
+            -   Grundlagen:
+                -   Erläuterung zu Ansible: 1_Technologien/Ansible/Wissen/01_Grundlagen/1_Erläuterung
+                        zu Ansible.md
+                -   Begriffe und Konzepte: 1_Technologien/Ansible/Wissen/01_Grundlagen/2_Begriffe
+                        und Konzepte.md
+                -   Funktionsweise Ansible: 1_Technologien/Ansible/Wissen/01_Grundlagen/3_Funktionsweise
+                        Ansible.md
+                -   Beispiele und Tutorials: 1_Technologien/Ansible/Wissen/01_Grundlagen/4_Beispiele
+                        und Tutorials.md
+            -   Starten mit Ansible:
+                -   Installation von Ansible: 1_Technologien/Ansible/Wissen/02_Starten
+                        mit Ansible/Installation von Ansible.md
+            -   Best Practices:
+                -   ansible-dir: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-dir.md
+                -   ansible-doku: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-doku.md
+                -   ansible-inventory: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-inventory.md
+                -   ansible-playbook: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-playbook.md
+            -   cli-tools:
+                -   Ansible-Builder: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Builder.md
+                -   Ansible-Config: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Config.md
+                -   Ansible-Doc: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Doc.md
+                -   Ansible-Galaxy: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Galaxy.md
+                -   Ansible-Inventory: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Inventory.md
+                -   Ansible-Lint: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Lint.md
+                -   Ansible-Navigator: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Navigator.md
+                -   Ansible-Playbook: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Playbook.md
+                -   Ansible-Vault: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Vault.md
+                -   Wichtige Befehle: 1_Technologien/Ansible/Wissen/04_cli-tools/Wichtige
+                        Befehle.md
+            -   Komponenten:
+                -   ansible playbooks: 1_Technologien/Ansible/Wissen/05_Komponenten/ansible
+                        playbooks.md
+                -   ansible roles: 1_Technologien/Ansible/Wissen/05_Komponenten/ansible
+                        roles.md
+                -   Collections:
+                    -   Installation und Verwendung: 1_Technologien/Ansible/Wissen/05_Komponenten/Collections/Installation
+                            und Verwendung.md
+                -   Module:
+                    -   ansible-win-desired-state-configuration: 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible-win-desired-state-configuration.md
+                    -   ansible.builtin:
+                        -   command: 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/command.md
+                        -   copy: 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/copy.md
+                        -   debug: 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/debug.md
+                        -   quote: 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/quote.md
+                        -   shell: 1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/shell.md
+            -   GUI:
+                -   Ansible Forms: 1_Technologien/Ansible/Wissen/06_GUI/Ansible Forms.md
+                -   Semaphore:
+                    -   Semaphore mit Docker unter Ubuntu: 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore
+                            mit Docker unter Ubuntu.md
+                    -   Semaphore mit apt: 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore
+                            mit apt.md
+            -   ' Sonstiges':
+                -   Dev-Tools: 1_Technologien/Ansible/Wissen/07_ Sonstiges/Dev-Tools.md
+                -   Priviledged User Linux: 1_Technologien/Ansible/Wissen/07_ Sonstiges/Priviledged
+                        User Linux.md
+                -   ansible-become-priviledge-escalation: 1_Technologien/Ansible/Wissen/07_
+                        Sonstiges/ansible-become-priviledge-escalation.md
+                -   jinja-templating: 1_Technologien/Ansible/Wissen/07_ Sonstiges/jinja-templating.md
+                -   potentielle-probleme: 1_Technologien/Ansible/Wissen/07_ Sonstiges/potentielle-probleme.md
+    -   Cisco:
+        -   Grundlegend: 1_Technologien/Cisco/Grundlegend.md
+        -   Router:
+            -   Basiskonfigurationen: 1_Technologien/Cisco/Router/1_Basiskonfigurationen.md
+            -   Zugriff absichern: 1_Technologien/Cisco/Router/2_Zugriff absichern.md
+            -   SSH: 1_Technologien/Cisco/Router/3_SSH.md
+            -   Interface konfigurieren: 1_Technologien/Cisco/Router/4_Interface konfigurieren.md
+            -   DHCP: 1_Technologien/Cisco/Router/5_DHCP.md
+            -   Grundlegend: 1_Technologien/Cisco/Router/Grundlegend.md
+            -   Troubleshooting: 1_Technologien/Cisco/Router/Troubleshooting.md
+        -   Switch:
+            -   Inital Settings: 1_Technologien/Cisco/Switch/1_Inital Settings.md
+            -   Gesicherter Zugriff (SSH): 1_Technologien/Cisco/Switch/2_Gesicherter
+                    Zugriff (SSH).md
+            -   VLAN: 1_Technologien/Cisco/Switch/3_VLAN.md
+            -   PortChannel (LAG): 1_Technologien/Cisco/Switch/4_PortChannel (LAG).md
+            -   (R)STP: 1_Technologien/Cisco/Switch/5_(R)STP.md
+            -   Security: 1_Technologien/Cisco/Switch/6_Security.md
+            -   Test: 1_Technologien/Cisco/Switch/Test.md
+    -   Grundlegend:
+        -   IPv6: 1_Technologien/Grundlegend/IPv6.md
+-   Aufgaben:
+    -   Semester:
+        -   '10': 2_Aufgaben/1_Semester/24_10.md
+        -   '11': 2_Aufgaben/1_Semester/24_11.md
+        -   '12': 2_Aufgaben/1_Semester/24_12.md
+        -   '01': 2_Aufgaben/1_Semester/25_01.md
+        -   '02': 2_Aufgaben/1_Semester/25_02.md
+-   Belegarbeit:
+    -   Notizen_Belegarbeit: 5_Belegarbeit/Notizen_Belegarbeit.md
+site_author: Maik Käseberg
+site_name: Knowledgebase
+theme:
+    favicon: icon/icon.ico
+    features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.instant
+    - navigation.sections
+    - toc.integrate
+    - content.tabs
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.action.view
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.path
+    - content.tooltips
+    - palette
+    font: false
+    icon:
+        admonition:
+            info: material/alarm
+    logo: icon/icon.png
+    name: material
+    palette:
+    -   accent: '#255f8b'
+        media: '(prefers-color-scheme: light)'
+        primary: '#00305d'
+        scheme: default
+        toggle:
+            icon: material/toggle-switch-off-outline
+            name: Switch to dark mode
+    -   accent: '#255f8b'
+        media: '(prefers-color-scheme: dark)'
+        primary: '#00305d'
+        scheme: slate
+        toggle:
+            icon: material/toggle-switch
+            name: Switch to light mode
