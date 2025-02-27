@@ -26,8 +26,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add mkdocs.yml
-          git diff --quiet && git diff --staged --quiet || git commit -m "Automatische Aktualisierung der mkdocs.yml"
-          git push || echo "Keine Änderungen zum Pushen"
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Automatische Aktualisierung der mkdocs.yml" && git push)
 
       - name: Webseite bauen & deployen
         run: mkdocs gh-deploy --force
