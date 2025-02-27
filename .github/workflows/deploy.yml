@@ -19,7 +19,7 @@ jobs:
           pip install mkdocs-material pyyaml mkdocs-gen-files mkdocs-literate-nav
 
       - name: Automatisch mkdocs.yml aktualisieren
-        run: python gen_nav.py.py
+        run: python gen_nav.py
 
       - name: Änderungen committen (falls nötig)
         run: |
