@@ -62,7 +62,6 @@ DEFAULT_CONFIG = {
         {
             "with-pdf": {
                 "cover": False,
-                "toc": True,
                 "output_path": "pdfs"
             }
         }
@@ -76,10 +75,7 @@ def clean_name(name):
     return match.group(1) if match else name  
 
 def scan_directory(base_dir):
-    """
-    Scannt das Verzeichnis und erstellt eine geschachtelte Struktur.
-    Dabei wird jeder Dateipfad so aufgebaut, dass er mit 'Knowledgebase/' beginnt.
-    """
+    """Scannt das Verzeichnis und erstellt eine geschachtelte Struktur für die Navigation."""
     structure = {}
 
     for root, dirs, files in os.walk(base_dir):
@@ -97,10 +93,7 @@ def scan_directory(base_dir):
                 current_level = current_level.setdefault(part, {})
             for md_file in md_files:
                 file_name = clean_name(os.path.splitext(md_file)[0])
-                if rel_path == ".":
-                    final_path = "Knowledgebase/" + md_file
-                else:
-                    final_path = "Knowledgebase/" + os.path.join(rel_path, md_file).replace("\\", "/")
+                final_path = os.path.join("Knowledgebase", rel_path, md_file).replace("\\", "/")
                 current_level[file_name] = final_path
 
     structure.pop(".", None)
@@ -117,15 +110,13 @@ def update_mkdocs_yml():
     Aktualisiert mkdocs.yml und stellt sicher, dass die Default-Konfiguration vor dem
     nav-Bereich steht – in der gewünschten Reihenfolge.
     """
-    # Neue oder vorhandene Konfiguration laden
     if not os.path.exists(MKDOCS_YML):
         print("⚠️ mkdocs.yml nicht gefunden. Erstelle neue Datei mit Standardwerten.")
         config = DEFAULT_CONFIG.copy()
     else:
         with open(MKDOCS_YML, "r", encoding="utf-8") as f:
             config = yaml.safe_load(f) or {}
-    
-    # Fehlende Standardwerte ergänzen
+
     for key, value in DEFAULT_CONFIG.items():
         if key not in config:
             config[key] = value
@@ -133,16 +124,21 @@ def update_mkdocs_yml():
     # Navigation generieren
     structure = scan_directory(BASE_DIR)
     new_nav = convert_to_yaml_list(structure)
+
+    # Immer index.md an erster Stelle hinzufügen
+    new_nav.insert(0, {"Home": "index.md"})
+
     if not new_nav:
         print("⚠️ Keine Markdown-Dateien gefunden! Navigation bleibt leer.")
         return
+
     config["nav"] = new_nav
 
-    # Reihenfolge erzwingen: site_author, site_name, theme, extra, extra_css, plugins, nav
+    # Reihenfolge der Konfiguration sicherstellen
     ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "plugins", "nav"]
     ordered_config = {key: config[key] for key in ordered_keys if key in config}
 
-    # YAML-Datei mit fester Reihenfolge schreiben (sort_keys=False verhindert automatische Sortierung)
+    # YAML-Datei schreiben
     with open(MKDOCS_YML, "w", encoding="utf-8") as f:
         yaml.dump(ordered_config, f, allow_unicode=True, default_flow_style=False, indent=4, sort_keys=False)
 
@@ -151,15 +147,12 @@ def update_mkdocs_yml():
 if __name__ == "__main__":
     update_mkdocs_yml()
 
-    # Installiere benötigte Pakete
     print("📦 Installiere benötigte Python-Pakete...")
     subprocess.run(["pip", "install", "mkdocs", "mkdocs-material", "mkdocs-with-pdf"], check=True)
 
-    # MkDocs-Build ausführen
     print("🔧 Baue die MkDocs-Dokumentation...")
     subprocess.run(["mkdocs", "build"], check=True)
 
-    # Deployment der MkDocs-Seite
     print("🚀 Starte Deployment...")
     subprocess.run(["mkdocs", "gh-deploy", "--force"], check=True)
 
