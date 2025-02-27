@@ -15,6 +15,7 @@ DEFAULT_CONFIG = {
     "site_name": "Knowledgebase",
     "theme": {
         "name": "material",
+        "custom_dir": "docs/overrides",
         "font": False,
         "favicon": "icon/icon.ico",
         "logo": "icon/icon.png",
@@ -57,15 +58,8 @@ DEFAULT_CONFIG = {
         "generator": False
     },
     "extra_css": ["css/extra.css"],
-    "plugins": [
-        "search",
-        {
-            "with-pdf": {
-                "cover": False,
-                "output_path": "pdfs"
-            }
-        }
-    ]
+    "extra_javascript": ["js/print-button.js"],
+    "plugins": ["search"]
 }
 
 def clean_name(name):
@@ -122,7 +116,7 @@ def update_mkdocs_yml():
     else:
         with open(MKDOCS_YML, "r", encoding="utf-8") as f:
             config = yaml.safe_load(f) or {}
-    
+
     # Fehlende Standardwerte ergänzen
     for key, value in DEFAULT_CONFIG.items():
         if key not in config:
@@ -139,13 +133,14 @@ def update_mkdocs_yml():
     new_nav.insert(0, {"Home": "index.md"})
     config["nav"] = new_nav
 
-    # Wenn wir in einer CI-Umgebung laufen, entferne das PDF-Plugin, um den Fehler zu vermeiden.
-    if os.environ.get("CI") == "true":
-        if "plugins" in config:
-            config["plugins"] = [p for p in config["plugins"] if not (isinstance(p, dict) and "with-pdf" in p)]
-    
-    # Reihenfolge erzwingen: site_author, site_name, theme, extra, extra_css, plugins, nav
-    ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "plugins", "nav"]
+    # Stellen sicher, dass extra_javascript enthalten ist
+    if "extra_javascript" not in config:
+        config["extra_javascript"] = ["js/print-button.js"]
+    elif "js/print-button.js" not in config["extra_javascript"]:
+        config["extra_javascript"].append("js/print-button.js")
+
+    # Reihenfolge erzwingen
+    ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "extra_javascript", "plugins", "nav"]
     ordered_config = {key: config[key] for key in ordered_keys if key in config}
 
     with open(MKDOCS_YML, "w", encoding="utf-8") as f:
@@ -156,16 +151,8 @@ def update_mkdocs_yml():
 if __name__ == "__main__":
     update_mkdocs_yml()
 
-    # Patch mkdocs-with-pdf: Überschreibe Options.cover_title, damit kein Zugriff auf _cover_title erfolgt.
-    try:
-        import mkdocs_with_pdf.options as pdf_opts
-        pdf_opts.Options.cover_title = property(lambda self: '')
-        print("Patching mkdocs-with-pdf Options.cover_title succeeded.")
-    except Exception as e:
-        print("Patching mkdocs-with-pdf Options.cover_title failed:", e)
-
     print("📦 Installiere benötigte Python-Pakete...")
-    subprocess.run(["pip", "install", "mkdocs", "mkdocs-material", "mkdocs-with-pdf==0.9.2"], check=True)
+    subprocess.run(["pip", "install", "mkdocs", "mkdocs-material"], check=True)
 
     print("🔧 Baue die MkDocs-Dokumentation...")
     subprocess.run(["mkdocs", "build"], check=True)
