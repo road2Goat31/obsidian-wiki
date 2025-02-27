@@ -62,7 +62,7 @@ DEFAULT_CONFIG = {
         {
             "with-pdf": {
                 "cover": False,
-                "cover_title": "",
+                "cover_title": " ",
                 "output_path": "pdfs"
             }
         }
