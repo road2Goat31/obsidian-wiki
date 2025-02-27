@@ -1,9 +1,14 @@
-**Interface ein VLAN zuornden**
+# VLAN erstellen
 
 `configure Terminal`
-`vlan10`
+`interface vlan 1`
+`ip address 192.158.1.1 255.255.255.0`
+`no shutdown`
 `name {Name vom VLAN}`
 `end`
+
+
+# Interface ein VLAN zuornden
 
 `configure Terminal`
 `interface fa0/2`
