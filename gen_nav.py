@@ -123,6 +123,7 @@ def update_mkdocs_yml():
         with open(MKDOCS_YML, "r", encoding="utf-8") as f:
             config = yaml.safe_load(f) or {}
     
+    # Fehlende Standardwerte ergänzen
     for key, value in DEFAULT_CONFIG.items():
         if key not in config:
             config[key] = value
@@ -138,6 +139,11 @@ def update_mkdocs_yml():
     new_nav.insert(0, {"Home": "index.md"})
     config["nav"] = new_nav
 
+    # Wenn wir in einer CI-Umgebung laufen, entferne das PDF-Plugin, um den Fehler zu vermeiden.
+    if os.environ.get("CI") == "true":
+        if "plugins" in config:
+            config["plugins"] = [p for p in config["plugins"] if not (isinstance(p, dict) and "with-pdf" in p)]
+    
     # Reihenfolge erzwingen: site_author, site_name, theme, extra, extra_css, plugins, nav
     ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "plugins", "nav"]
     ordered_config = {key: config[key] for key in ordered_keys if key in config}
