@@ -10,7 +10,7 @@ RPS: Redundant Power System
 - Aus: RPS ist aus
 - Grün: RPS funktioniert und kann redundant Strom liefern
 - blinkt grün: RPS ist an, aber kann keinen redundanten Strom liefern, da anderes Gerät damit beliefert wird
-- orange: Standby oder Fehler 
+- orange: Standby oder Fehler
 - blinkt Orange: interne Stromversorgung hat versagt und RPS liefert Strom
 
 STAT:
@@ -57,24 +57,24 @@ boot system flash:/{flash device}/{OS_file_name}
 **Management-Zugriff**
 Alle Ports sind standardmäßig dem VLAN 1 zugeordnet. Es wird empfohlen ein anderes VLAN für das Management des Switches zu nutzen, z.B. VLAN 99
 
-``configure terminal
-``interface vlan 99
-``ip address {IP-adresse} {Subnetmaske}
-``(ipv6 address {IPv6-Adresse})
-``no shutdown
-``end
-``copy running-config startup-config
+`configure terminal`
+`interface vlan 99`
+`ip address {IP-adresse} {Subnetmaske}`
+`(ipv6 address {IPv6-Adresse})`
+`no shutdown`
+`end`
+`copy running-config startup-config`
 
 **Default Gateway:**
 
-``configure Terminal
-``ip default-gateway {ip-adresse}
-``end
-``copy running-config startup-config
+`configure Terminal`
+`ip default-gateway {ip-adresse}`
+`end`
+`copy running-config startup-config`
 
 **Konfiguration verifizieren:**
 
-``show ip interface brief
+`show ip interface brief`
 
 **Sonstige Commands:**
 

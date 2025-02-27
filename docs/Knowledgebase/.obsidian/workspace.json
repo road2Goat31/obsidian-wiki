@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_Aufgaben/1_Semester/25_02.md",
+                "file": "1_Technologien/Cisco/Switch/2_Gesicherter Zugriff (SSH).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "25_02"
+              "title": "2_Gesicherter Zugriff (SSH)"
             }
           }
         ]
@@ -179,6 +179,8 @@
   },
   "active": "851ea8d8d5b20d18",
   "lastOpenFiles": [
+    "1_Technologien/Cisco/Switch/1_Inital Settings.md",
+    "2_Aufgaben/1_Semester/25_02.md",
     "2_Aufgaben/1_Semester/24_10.md",
     "1_Technologien/Cisco/Switch/Test e2734.md",
     "1_Technologien/Cisco/Switch/Test.md",
@@ -207,14 +209,12 @@
     "1_Technologien/Ansible/praktische_Uebungen/Aufgabe_Switch.md",
     "1_Technologien/Cisco/Switch/5_(R)STP.md",
     "1_Technologien/Cisco/Switch/6_Security.md",
-    "1_Technologien/Cisco/Switch/1_Inital Settings.md",
     "1_Technologien/Cisco/Switch/3_VLAN.md",
     "1_Technologien/Cisco/Switch/2_Gesicherter Zugriff (SSH).md",
     "1_Technologien/Cisco/Switch/4_PortChannel (LAG).md",
     "1_Technologien/Grundlegend/IPv6.md",
     "1_Technologien/Cisco/Grundlegend.md",
     "1_Technologien/Cisco/Router/Troubleshooting.md",
-    "1_Technologien/Cisco/Router/Grundlegend.md",
     "1_Technologien/Grundlegend/Anhang/desktop.ini",
     "1_Technologien/Grundlegend/Anhang",
     "1_Technologien/Unbenannt/desktop.ini",
