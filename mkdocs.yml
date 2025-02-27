@@ -51,7 +51,16 @@ extra:
     link: https://github.com/road2Goat31/obsidian-wiki
   generator: false
 nav:
-- 1_Technologien:
+- 5_Belegarbeit:
+  - Notizen_Belegarbeit: 5_Belegarbeit/Notizen_Belegarbeit.md
+- Aufgaben:
+  - 1_Semester:
+    - '24_10': 2_Aufgaben/1_Semester/24_10.md
+    - '24_11': 2_Aufgaben/1_Semester/24_11.md
+    - '24_12': 2_Aufgaben/1_Semester/24_12.md
+    - '25_01': 2_Aufgaben/1_Semester/25_01.md
+    - '25_02': 2_Aufgaben/1_Semester/25_02.md
+- Technologien:
   - Ansible:
     - Wissen:
       - 01_Grundlagen:
@@ -136,12 +145,3 @@ nav:
       - Test: 1_Technologien/Cisco/Switch/Test.md
   - Grundlegend:
     - IPv6: 1_Technologien/Grundlegend/IPv6.md
-- 2_Aufgaben:
-  - 1_Semester:
-    - '24_10': 2_Aufgaben/1_Semester/24_10.md
-    - '24_11': 2_Aufgaben/1_Semester/24_11.md
-    - '24_12': 2_Aufgaben/1_Semester/24_12.md
-    - '25_01': 2_Aufgaben/1_Semester/25_01.md
-    - '25_02': 2_Aufgaben/1_Semester/25_02.md
-- 5_Belegarbeit:
-  - Notizen_Belegarbeit: 5_Belegarbeit/Notizen_Belegarbeit.md
