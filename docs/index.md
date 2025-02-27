@@ -17,11 +17,12 @@ Nutze die Navigation oder die Suchfunktion, um schnell relevante Inhalte zu find
 
 💡 **Pro-Tipp:** Regelmäßig vorbeischauen – die Knowledgebase wird stetig erweitert!  
 
+## Komentare
 
 <script src="https://utteranc.es/client.js"
-        repo="USERNAME/REPO"
+        repo="road2Goat31/obsidian-wiki"
         issue-term="pathname"
-        theme="github-light"
+        theme="preferred-color-scheme"
         crossorigin="anonymous"
         async>
 </script>
