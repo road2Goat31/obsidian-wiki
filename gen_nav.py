@@ -15,7 +15,7 @@ DEFAULT_CONFIG = {
     "site_name": "Knowledgebase",
     "theme": {
         "name": "material",
-        "custom_dir": "docs\overrides",
+        "custom_dir": "docs/overrides",
         "font": False,
         "favicon": "icon/icon.ico",
         "logo": "icon/icon.png",
