@@ -16,7 +16,7 @@ jobs:
       - name: Python & Abhängigkeiten installieren
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs-material pyyaml mkdocs-gen-files mkdocs-literate-nav
+          pip install mkdocs-material pyyaml mkdocs-gen-files mkdocs-literate-nav mkdocs-with-pdf
 
       - name: Automatisch mkdocs.yml aktualisieren
         run: python gen_nav.py

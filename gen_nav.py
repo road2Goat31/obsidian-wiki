@@ -1,4 +1,5 @@
 import os
+import subprocess
 import yaml
 import re
 
@@ -55,7 +56,17 @@ DEFAULT_CONFIG = {
         ],
         "generator": False
     },
-    "extra_css": ["css/extra.css"]
+    "extra_css": ["css/extra.css"],
+    "plugins": [
+        "search",
+        {
+            "with-pdf": {
+                "cover": False,
+                "toc": True,
+                "output_path": "pdfs"
+            }
+        }
+    ]
 }
 
 def clean_name(name):
@@ -127,8 +138,8 @@ def update_mkdocs_yml():
         return
     config["nav"] = new_nav
 
-    # Reihenfolge erzwingen: site_author, site_name, theme, extra, extra_css, nav
-    ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "nav"]
+    # Reihenfolge erzwingen: site_author, site_name, theme, extra, extra_css, plugins, nav
+    ordered_keys = ["site_author", "site_name", "theme", "extra", "extra_css", "plugins", "nav"]
     ordered_config = {key: config[key] for key in ordered_keys if key in config}
 
     # YAML-Datei mit fester Reihenfolge schreiben (sort_keys=False verhindert automatische Sortierung)
@@ -139,3 +150,17 @@ def update_mkdocs_yml():
 
 if __name__ == "__main__":
     update_mkdocs_yml()
+
+    # Installiere benötigte Pakete
+    print("📦 Installiere benötigte Python-Pakete...")
+    subprocess.run(["pip", "install", "mkdocs", "mkdocs-material", "mkdocs-with-pdf"], check=True)
+
+    # MkDocs-Build ausführen
+    print("🔧 Baue die MkDocs-Dokumentation...")
+    subprocess.run(["mkdocs", "build"], check=True)
+
+    # Deployment der MkDocs-Seite
+    print("🚀 Starte Deployment...")
+    subprocess.run(["mkdocs", "gh-deploy", "--force"], check=True)
+
+    print("✅ Deployment abgeschlossen!")
