@@ -51,19 +51,39 @@ extra:
     link: https://github.com/road2Goat31/obsidian-wiki
   generator: false
 nav:
-- 5_Belegarbeit:
-  - Notizen_Belegarbeit: 5_Belegarbeit/Notizen_Belegarbeit.md
 - Aufgaben:
-  - 1_Semester:
+  - Semester:
     - '24_10': 2_Aufgaben/1_Semester/24_10.md
     - '24_11': 2_Aufgaben/1_Semester/24_11.md
     - '24_12': 2_Aufgaben/1_Semester/24_12.md
     - '25_01': 2_Aufgaben/1_Semester/25_01.md
     - '25_02': 2_Aufgaben/1_Semester/25_02.md
+- Belegarbeit:
+  - Notizen_Belegarbeit: 5_Belegarbeit/Notizen_Belegarbeit.md
 - Technologien:
   - Ansible:
     - Wissen:
-      - 01_Grundlagen:
+      - ' Sonstiges':
+        - Dev-Tools: 1_Technologien/Ansible/Wissen/07_ Sonstiges/Dev-Tools.md
+        - Priviledged User Linux: 1_Technologien/Ansible/Wissen/07_ Sonstiges/Priviledged
+            User Linux.md
+        - ansible-become-priviledge-escalation: 1_Technologien/Ansible/Wissen/07_
+            Sonstiges/ansible-become-priviledge-escalation.md
+        - jinja-templating: 1_Technologien/Ansible/Wissen/07_ Sonstiges/jinja-templating.md
+        - potentielle-probleme: 1_Technologien/Ansible/Wissen/07_ Sonstiges/potentielle-probleme.md
+      - Best Practices:
+        - ansible-dir: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-dir.md
+        - ansible-doku: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-doku.md
+        - ansible-inventory: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-inventory.md
+        - ansible-playbook: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-playbook.md
+      - GUI:
+        - Ansible Forms: 1_Technologien/Ansible/Wissen/06_GUI/Ansible Forms.md
+        - Semaphore:
+          - Semaphore mit Docker unter Ubuntu: 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore
+              mit Docker unter Ubuntu.md
+          - Semaphore mit apt: 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore
+              mit apt.md
+      - Grundlagen:
         - 1_Erläuterung zu Ansible: 1_Technologien/Ansible/Wissen/01_Grundlagen/1_Erläuterung
             zu Ansible.md
         - 2_Begriffe und Konzepte: 1_Technologien/Ansible/Wissen/01_Grundlagen/2_Begriffe
@@ -72,26 +92,7 @@ nav:
             Ansible.md
         - 4_Beispiele und Tutorials: 1_Technologien/Ansible/Wissen/01_Grundlagen/4_Beispiele
             und Tutorials.md
-      - 02_Starten mit Ansible:
-        - Installation von Ansible: 1_Technologien/Ansible/Wissen/02_Starten mit Ansible/Installation
-            von Ansible.md
-      - 03_Best Practices:
-        - ansible-dir: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-dir.md
-        - ansible-doku: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-doku.md
-        - ansible-inventory: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-inventory.md
-        - ansible-playbook: 1_Technologien/Ansible/Wissen/03_Best Practices/ansible-playbook.md
-      - 04_cli-tools:
-        - Ansible-Builder: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Builder.md
-        - Ansible-Config: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Config.md
-        - Ansible-Doc: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Doc.md
-        - Ansible-Galaxy: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Galaxy.md
-        - Ansible-Inventory: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Inventory.md
-        - Ansible-Lint: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Lint.md
-        - Ansible-Navigator: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Navigator.md
-        - Ansible-Playbook: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Playbook.md
-        - Ansible-Vault: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Vault.md
-        - Wichtige Befehle: 1_Technologien/Ansible/Wissen/04_cli-tools/Wichtige Befehle.md
-      - 05_Komponenten:
+      - Komponenten:
         - Collections:
           - Installation und Verwendung: 1_Technologien/Ansible/Wissen/05_Komponenten/Collections/Installation
               und Verwendung.md
@@ -106,21 +107,20 @@ nav:
         - ansible playbooks: 1_Technologien/Ansible/Wissen/05_Komponenten/ansible
             playbooks.md
         - ansible roles: 1_Technologien/Ansible/Wissen/05_Komponenten/ansible roles.md
-      - 06_GUI:
-        - Ansible Forms: 1_Technologien/Ansible/Wissen/06_GUI/Ansible Forms.md
-        - Semaphore:
-          - Semaphore mit Docker unter Ubuntu: 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore
-              mit Docker unter Ubuntu.md
-          - Semaphore mit apt: 1_Technologien/Ansible/Wissen/06_GUI/Semaphore/Semaphore
-              mit apt.md
-      - 07_ Sonstiges:
-        - Dev-Tools: 1_Technologien/Ansible/Wissen/07_ Sonstiges/Dev-Tools.md
-        - Priviledged User Linux: 1_Technologien/Ansible/Wissen/07_ Sonstiges/Priviledged
-            User Linux.md
-        - ansible-become-priviledge-escalation: 1_Technologien/Ansible/Wissen/07_
-            Sonstiges/ansible-become-priviledge-escalation.md
-        - jinja-templating: 1_Technologien/Ansible/Wissen/07_ Sonstiges/jinja-templating.md
-        - potentielle-probleme: 1_Technologien/Ansible/Wissen/07_ Sonstiges/potentielle-probleme.md
+      - Starten mit Ansible:
+        - Installation von Ansible: 1_Technologien/Ansible/Wissen/02_Starten mit Ansible/Installation
+            von Ansible.md
+      - cli-tools:
+        - Ansible-Builder: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Builder.md
+        - Ansible-Config: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Config.md
+        - Ansible-Doc: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Doc.md
+        - Ansible-Galaxy: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Galaxy.md
+        - Ansible-Inventory: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Inventory.md
+        - Ansible-Lint: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Lint.md
+        - Ansible-Navigator: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Navigator.md
+        - Ansible-Playbook: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Playbook.md
+        - Ansible-Vault: 1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Vault.md
+        - Wichtige Befehle: 1_Technologien/Ansible/Wissen/04_cli-tools/Wichtige Befehle.md
     - praktische_Uebungen:
       - Aufgabe_Switch: 1_Technologien/Ansible/praktische_Uebungen/Aufgabe_Switch.md
       - Beispiel_Testumgebung: 1_Technologien/Ansible/praktische_Uebungen/Beispiel_Testumgebung.md
