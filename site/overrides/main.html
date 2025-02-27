@@ -3,4 +3,7 @@
 {% block content %}
     {{ super() }}
     <button id="print-button" onclick="window.print()">🖨️ Drucken</button>
+
+    {% block extra_buttons %}
+    {% endblock %}
 {% endblock %}

@@ -4,10 +4,6 @@
     {{ super() }}
     <button id="print-button" onclick="window.print()">🖨️ Drucken</button>
     {% block extra_buttons %}
-    <button onclick="logout()" style="position: fixed; top: 10px; right: 10px; padding: 10px; background-color: red; color: white; border: none; cursor: pointer;">
-        🔓 Logout
-    </button>
+    <!-- Der Logout-Button wird dynamisch durch JavaScript erstellt -->
+    {% endblock %}
 {% endblock %}
-
-{% endblock %}
-
