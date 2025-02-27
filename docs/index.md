@@ -17,6 +17,14 @@ Nutze die Navigation oder die Suchfunktion, um schnell relevante Inhalte zu find
 
 💡 **Pro-Tipp:** Regelmäßig vorbeischauen – die Knowledgebase wird stetig erweitert!  
 
+
+<script src="https://utteranc.es/client.js"
+        repo="USERNAME/REPO"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 ---
 
 📌 [Zur Dokumentation](./docs/Knowledgebase/) | 🛠 [GitHub Repository](https://github.com/road2Goat31/obsidian-wiki)  
