@@ -11,7 +11,8 @@ MKDOCS_YML = "mkdocs.yml"
 REMOVE_PREFIX_FROM = {"1_Technologien", "2_Aufgaben", "5_Belegarbeit"}
 
 def clean_name(name):
-    """Entfernt numerische Präfixe (z. B. '1_') von bestimmten Ordnern."""
+    """Entfernt numerische Präfixe (z. B. '1_') und korrigiert Leerzeichen."""
+    name = name.strip()  # Eventuelle führende/trailing Leerzeichen entfernen
     match = re.match(r"^\d+_(.+)", name)
     return match.group(1) if match else name  # Entfernt nur Zahlen-Präfixe
 
@@ -34,7 +35,7 @@ def scan_directory(base_dir):
                 current_level = current_level.setdefault(part, {})
 
             for md_file in md_files:
-                file_name = os.path.splitext(md_file)[0]
+                file_name = clean_name(os.path.splitext(md_file)[0])  # Auch für Dateien Namen bereinigen
                 current_level[file_name] = os.path.join(rel_path, md_file).replace("\\", "/")
 
     print(f"📄 Gefundene Struktur: {structure}")
@@ -47,10 +48,8 @@ def build_nav_structure(structure):
         for key, value in sorted(node.items()):
             if isinstance(value, dict):
                 sub_nav = build_recursive(value)
-                index_file = value.get("index")
-                if index_file:
-                    sub_nav.insert(0, {"Startseite": index_file})
-                nav.append({key: sub_nav})
+                if sub_nav:
+                    nav.append({key: sub_nav})
             else:
                 nav.append({key: value})
         return nav
@@ -71,6 +70,9 @@ def update_mkdocs_yml():
     if not new_nav:
         print("⚠️ Keine Markdown-Dateien gefunden! Navigation bleibt leer.")
         return
+
+    # Entfernt den Punkt-Eintrag, falls vorhanden
+    new_nav = [entry for entry in new_nav if not (isinstance(entry, dict) and "." in entry)]
 
     config["nav"] = new_nav
 
