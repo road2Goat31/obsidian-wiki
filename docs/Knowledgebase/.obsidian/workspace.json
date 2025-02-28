@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_Technologien/Grundlegend/IPv4.md",
+                "file": "1_Technologien/Grundlegend/Physical Layer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IPv4"
+              "title": "Physical Layer"
             }
           }
         ]
@@ -179,17 +179,34 @@
   },
   "active": "851ea8d8d5b20d18",
   "lastOpenFiles": [
-    "1_Technologien/Grundlegend/Anhang/Pasted image 20250227153917.png",
-    "1_Technologien/Cisco/Grundlegend.md",
-    "1_Technologien/Grundlegend/IPv4.md",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228083553.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228083458.png",
+    "1_Technologien/Grundlegend/Physical Layer.md",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228083321.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228083303.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228083234.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228083044.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228083022.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228082927.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228082736.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228082716.png",
+    "1_Technologien/Grundlegend/Anhang/Pasted image 20250228082624.png",
     "1_Technologien/Cisco/Switch/6_Security.md",
+    "2025-02-28.md",
+    "1_Technologien/Cisco/Grundlegend.md",
+    "1_Technologien/Grundlegend/Protokolle/Übersicht Referenzmodell.md",
+    "1_Technologien/Grundlegend/Protokolle/Transportschicht.md",
+    "1_Technologien/Grundlegend/Protokolle/IPv6.md",
+    "1_Technologien/Grundlegend/Protokolle/IPv4.md",
+    "1_Technologien/Cisco/Switch/Config speichern.md",
+    "Unbenannt.canvas",
+    "1_Technologien/Cisco/Switch/1_Inital Settings.md",
+    "1_Technologien/Cisco/Switch/3_VLAN.md",
+    "1_Technologien/Grundlegend/Protokolle/Anhang",
+    "1_Technologien/Grundlegend/Protokolle",
     "1_Technologien/Cisco/Switch/5_(R)STP.md",
     "1_Technologien/Cisco/Switch/4_PortChannel (LAG).md",
-    "1_Technologien/Cisco/Switch/3_VLAN.md",
     "1_Technologien/Cisco/Switch/2_Gesicherter Zugriff (SSH).md",
-    "1_Technologien/Cisco/Switch/1_Inital Settings.md",
-    "1_Technologien/Cisco/Switch/Config speichern.md",
-    "1_Technologien/Cisco/Switch/Anhang/Pasted image 20250227150038.png",
     "2_Aufgaben/1_Semester/25_02.md",
     "1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Galaxy.md",
     "1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Lint.md",
@@ -201,20 +218,6 @@
     "1_Technologien/Ansible/Wissen/05_Komponenten/ansible playbooks.md",
     "1_Technologien/Ansible/Wissen/07_ Sonstiges/jinja-templating.md",
     "1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/command.md",
-    "1_Technologien/Ansible/Wissen/03_Best Practices/ansible-playbook.md",
-    "1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Navigator.md",
-    "1_Technologien/Ansible/Wissen/05_Komponenten/ansible roles.md",
-    "1_Technologien/Ansible/Wissen/05_Komponenten/Module/ansible.builtin/copy.md",
-    "1_Technologien/Ansible/Wissen/07_ Sonstiges/Priviledged User Linux.md",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017144917.png",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017143326.png",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017143241.png",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017143002.png",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017142305.png",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017134311.png",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017134215.png",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017134027.png",
-    "1_Technologien/Ansible/praktische_Uebungen/Anhang/Pasted image 20241017132437.png",
     "1_Technologien/Grundlegend/Anhang/desktop.ini",
     "1_Technologien/Grundlegend/Anhang",
     "1_Technologien/Unbenannt/desktop.ini",
@@ -222,9 +225,6 @@
     "1_Technologien/Cisco/Router/Anhang/desktop.ini",
     "1_Technologien/Cisco/Router/Anhang",
     "1_Technologien/Cisco/Switch/Anhang/desktop.ini",
-    "1_Technologien/Cisco/Switch/Anhang",
-    "1_Technologien/Cisco/Anhang/desktop.ini",
-    "1_Technologien/Cisco/Anhang",
-    "Unbenannt.canvas"
+    "1_Technologien/Cisco/Switch/Anhang"
   ]
 }
