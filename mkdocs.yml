@@ -169,8 +169,13 @@ nav:
                 -   potentielle-probleme: Knowledgebase/1_Technologien/Ansible/Wissen/07_
                         Sonstiges/potentielle-probleme.md
     -   Grundlegend:
-        -   IPv4: Knowledgebase/1_Technologien/Grundlegend/IPv4.md
-        -   IPv6: Knowledgebase/1_Technologien/Grundlegend/IPv6.md
+        -   Physical Layer: Knowledgebase/1_Technologien/Grundlegend/Physical Layer.md
+        -   Protokolle:
+            -   IPv4: Knowledgebase/1_Technologien/Grundlegend/Protokolle/IPv4.md
+            -   IPv6: Knowledgebase/1_Technologien/Grundlegend/Protokolle/IPv6.md
+            -   Transportschicht: Knowledgebase/1_Technologien/Grundlegend/Protokolle/Transportschicht.md
+            -   Übersicht Referenzmodell: Knowledgebase/1_Technologien/Grundlegend/Protokolle/Übersicht
+                    Referenzmodell.md
 -   Aufgaben:
     -   1_Semester:
         -   '24_10': Knowledgebase/2_Aufgaben/1_Semester/24_10.md
