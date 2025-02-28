@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#vlan-erstellen" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -530,6 +535,8 @@
       
         
       
+        
+      
     
     
       
@@ -621,6 +628,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -694,6 +703,28 @@
   
   <span class="md-ellipsis">
     6_Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Config%20speichern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config speichern
     
   </span>
   
@@ -2605,6 +2636,8 @@
       
         
       
+        
+      
     
     
       
@@ -2641,6 +2674,28 @@
             Grundlegend
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Grundlegend/IPv4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2993,13 +3048,14 @@
 
 
 
-  <h1>3_VLAN</h1>
-
-<p><strong>Interface ein VLAN zuornden</strong></p>
+<h1 id="vlan-erstellen">VLAN erstellen</h1>
 <p><code>configure Terminal</code>
-<code>vlan10</code>
+<code>interface vlan 1</code>
+<code>ip address 192.158.1.1 255.255.255.0</code>
+<code>no shutdown</code>
 <code>name {Name vom VLAN}</code>
 <code>end</code></p>
+<h1 id="interface-ein-vlan-zuornden">Interface ein VLAN zuornden</h1>
 <p><code>configure Terminal</code>
 <code>interface fa0/2</code>
 <code>switchport mode {access/trunk}</code>
