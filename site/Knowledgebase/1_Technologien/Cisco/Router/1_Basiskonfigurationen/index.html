@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../icon/icon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
@@ -76,6 +76,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#erstellen-eines-banners" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -797,6 +802,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -2631,6 +2638,8 @@
       
         
       
+        
+      
     
     
       
@@ -2703,10 +2712,6 @@
       
         
       
-        
-      
-        
-      
     
     
       
@@ -2748,50 +2753,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Grundlegend/Protokolle/IPv4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IPv4
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Grundlegend/Protokolle/IPv6/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IPv6
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../Grundlegend/Protokolle/Transportschicht/" class="md-nav__link">
         
   
@@ -2819,6 +2780,129 @@
   
   <span class="md-ellipsis">
     Übersicht Referenzmodell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Network Layer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Network Layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Grundlegend/Network%20Layer/IPv4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Grundlegend/Network%20Layer/IPv6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Grundlegend/Network%20Layer/Subnets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subnets
     
   </span>
   
@@ -3166,11 +3250,9 @@
 
 
 
-  <h1>1_Basiskonfigurationen</h1>
-
 <p><code>configure Terminal</code>
 <code>hostname {Hostanme}</code>
-<code>enable secret class</code>     --&gt; Login mit Authentifizierung
+<code>enable secret {Passwort}</code>     --&gt; Login mit Authentifizierung
 <code>line console 0</code>             <br />
 <code>password {Passwort}</code>
 <code>login</code>
@@ -3181,10 +3263,12 @@
 <code>transport input {ssh | telnet | none | all}</code>
 <code>exit</code>
 <code>service password-encryption</code>  --&gt; Verschlüsselung des Passworts</p>
-<p><strong>Erstellen eines Banners:</strong></p>
+<h1 id="erstellen-eines-banners">Erstellen eines Banners:</h1>
 <p><code>banner motd #Nur authorisierter Zugriff!#</code></p>
-<p><strong>Konfiguration Speichern</strong></p>
+<h1 id="konfiguration-speichern">Konfiguration Speichern</h1>
 <p><code>copy running-config startup-config</code></p>
+<h1 id="passworter">Passwörter</h1>
+<p><img alt="" src="../Anhang/Pasted%20image%2020250310080332.png" /></p>
 
 
 
@@ -3295,7 +3379,7 @@
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.top", "navigation.tabs", "navigation.instant", "navigation.sections", "toc.integrate", "content.tabs", "content.code.copy", "content.code.annotate", "content.action.edit", "content.action.view", "search.suggest", "search.highlight", "search.share", "navigation.footer", "navigation.indexes", "navigation.tracking", "navigation.path", "content.tooltips", "palette"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="../../../../../js/print-button.js"></script>
       
