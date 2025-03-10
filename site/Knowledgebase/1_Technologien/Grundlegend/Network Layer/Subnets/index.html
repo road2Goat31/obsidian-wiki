@@ -3262,19 +3262,19 @@
 <h2 id="subnet-bits_1">Subnet-Bits</h2>
 <p><img alt="" src="../Anhang/Pasted%20image%2020250310114538.png" /></p>
 <h1 id="effizient-subnetze-planen">effizient Subnetze planen</h1>
-<p>1) Anforderungen sammeln:
-   - Gegebene IP-Adresse und Subnetzmaske
-   - Anzahl Subnetze
-   - Anzahl Hosts pro Subnetz</p>
-<p>2) Subnetzmasken für die einzelnen Netze bestimmen:
-   - Subnetze nur so groß wie nötig wählen
-   - Netz 1: 4000 benötigte Hosts -&gt; /20 = 4096 - 2 Adressen
-   - Netz 2: 500 benötigte Hosts -&gt; /23 = 516 - 2 Adressen</p>
-<p>3) Netzwerkadressen und Broadcastadressen berechnen
-   - Netz 1: 4096 / 256 = 16 
-   - Bsp: 172.16.0.0 - 172.16.15.255 -&gt; -1, da 0 basiert
-   - Netz 2: 516 / 256 = 2
-   - Bsp: 12.16.16.0 - 172.16.17.255</p>
+<p>1) Anforderungen sammeln:<br />
+   - Gegebene IP-Adresse und Subnetzmaske<br />
+   - Anzahl Subnetze<br />
+   - Anzahl Hosts pro Subnetz  </p>
+<p>2) Subnetzmasken für die einzelnen Netze bestimmen:<br />
+   - Subnetze nur so groß wie nötig wählen<br />
+   - Netz 1: 4000 benötigte Hosts -&gt; /20 = 4096 - 2 Adressen<br />
+   - Netz 2: 500 benötigte Hosts -&gt; /23 = 516 - 2 Adressen  </p>
+<p>3) Netzwerkadressen und Broadcastadressen berechnen<br />
+   - Netz 1: 4096 / 256 = 16 <br />
+   - Bsp: 172.16.0.0 - 172.16.15.255 -&gt; -1, da 0 basiert<br />
+   - Netz 2: 516 / 256 = 2<br />
+   - Bsp: 12.16.16.0 - 172.16.17.255  </p>
 
 
 
