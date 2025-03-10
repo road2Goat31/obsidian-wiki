@@ -1,6 +1,6 @@
 ``configure Terminal``
 ``hostname {Hostanme}``
-`enable secret class`     --> Login mit Authentifizierung
+`enable secret {Passwort}`     --> Login mit Authentifizierung
 `line console 0`               
 `password {Passwort}`
 `login`
@@ -12,13 +12,16 @@
 `exit`
 `service password-encryption`  --> Verschlüsselung des Passworts
 
-**Erstellen eines Banners:**
+# Erstellen eines Banners:
 
 ``banner motd #Nur authorisierter Zugriff!#``
 
-**Konfiguration Speichern**
+# Konfiguration Speichern
 
 ``copy running-config startup-config``
+
+# Passwörter
+![](Anhang/Pasted%20image%2020250310080332.png)
 
 
 

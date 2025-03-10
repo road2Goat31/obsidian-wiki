@@ -8,13 +8,17 @@
 `no shutdown`
 `exit`
 
-**Loopback Interface**
+# Default Gateway
+
+`ip default-gateway {IP-Adresse}`
+
+# Loopback Interface
 
 `configure Terminal`
 `interface loopback {loopback Nummer}`
 `ip address {IP-Adresse} {Subnetmaske}`
 
-**Interface überprüfen**
+# Interface überprüfen
 
 ``show ip interface brief``
 ``show ipv6 interface brief``

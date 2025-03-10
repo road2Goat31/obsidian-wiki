@@ -1,3 +1,8 @@
+# Ethernet-Frame
+
+![](Anhang/Pasted%20image%2020250303072647.png)
+![](Anhang/Pasted%20image%2020250303072702.png)
+
 # Latenz/Bandbreite/Goodput
 
 Latenz= Latency refers to the amount of time, including delays, for data to travel from one given point to another

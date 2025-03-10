@@ -8,3 +8,7 @@ Ziel: Redundante Gateways
 **Cisco Nachbargeräte anzeigen**
 
 `show cdp neighbours`
+
+# Abkürzung in der Routing-Tabelle
+
+![](Anhang/Pasted%20image%2020250303095148.png)

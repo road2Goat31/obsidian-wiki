@@ -1,11 +1,11 @@
 
 **Frame-Forwarding-Methoden**
-- Store-and-Forward-Switchung
+- Store-and-Forward-Switchung  
 	- speichert den gesamten Frame und überprüft auf Fehler -> CRC(Cycling Redundancy Check) = Prüfsumme
 	- wenn kein Fehler vorhanden, dann wird es weitergeleitet
 	- wenn Fehler, dann wird Paket verworfen
 	- wird für QoS benötigt
-- Cut-Through-Switching
+- Cut-Through-Switching  
 	- leitet schon weiter, obwohl noch nicht der gesamte Frame da ist
 	- Fast-Forward-Switching -> leitet sofort weiter
 	- Fragment-Free-Switching -> speichert die ersten 64 bytes und überprüft auf Fehler
@@ -13,6 +13,7 @@
 **Speicherung**
 - Port-Based-Speicher -> Frames mit Port verlinkt gespeichert
 - Shared Memory -> speichert alle Frame sin einen Speicher, ports sind dynamisch verlinkt
+- MAC-Adressen werden ca. % Minuten im Mac-Adress-Table gehalten
 
 **Automatisch Ausgehandelt**
 - Speed (10/100/1000 Mbps)
