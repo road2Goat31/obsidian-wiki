@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Webseite vor dem Login unsichtbar machen
     document.body.style.display = "none"; // Zu Beginn ist die gesamte Seite unsichtbar
 
-    const CORRECT_HASH = "74acc7302baedbbf179966c973fed4a9c4a4110c8f2b685092565faa452e85b0"; 
+    const CORRECT_HASH = "c387fcbd588a20e0c17237a4b200962d32b51538e105f0beb17c7d68d11c8df4"; 
 
     async function hashPassword(password) {
         const encoder = new TextEncoder();
