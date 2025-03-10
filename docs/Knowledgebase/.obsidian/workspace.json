@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_Aufgaben/1_Semester/25_02.md",
+                "file": "1_Technologien/Grundlegend/Network Layer/Subnets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "25_02"
+              "title": "Subnets"
             }
           }
         ]
@@ -179,6 +179,7 @@
   },
   "active": "851ea8d8d5b20d18",
   "lastOpenFiles": [
+    "2_Aufgaben/1_Semester/25_02.md",
     "1_Technologien/Grundlegend/Network Layer/Subnets.md",
     "1_Technologien/Grundlegend/Network Layer/Anhang/Pasted image 20250310115033.png",
     "1_Technologien/Grundlegend/Network Layer/Anhang/Pasted image 20250310114538.png",
@@ -215,7 +216,6 @@
     "1_Technologien/Cisco/Switch/5_(R)STP.md",
     "1_Technologien/Cisco/Switch/4_PortChannel (LAG).md",
     "1_Technologien/Cisco/Switch/2_Gesicherter Zugriff (SSH).md",
-    "2_Aufgaben/1_Semester/25_02.md",
     "1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Galaxy.md",
     "1_Technologien/Ansible/Wissen/04_cli-tools/Ansible-Lint.md",
     "1_Technologien/Ansible/Wissen/01_Grundlagen/2_Begriffe und Konzepte.md",
