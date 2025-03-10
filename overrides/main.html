@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ super() }}
+    <button id="print-button" onclick="window.print()">🖨️ Drucken</button>
+    {% block extra_buttons %}
+    <!-- Der Logout-Button wird dynamisch durch JavaScript erstellt -->
+    {% endblock %}
+{% endblock %}
