@@ -58,7 +58,7 @@ DEFAULT_CONFIG = {
         "generator": False
     },
     "extra_css": ["css/extra.css"],
-    "extra_javascript": ["js/print-button.js", "js/auth.js"],
+    "extra_javascript": ["js/print-button.js"],
     "plugins": ["search"]
 }
 
